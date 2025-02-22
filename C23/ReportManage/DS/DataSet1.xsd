@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_JXCConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_JXCConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.C23.Properties.Settings.GlobalReference.Default.db_JXCConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_OrderTableAdapter" GeneratorDataComponentClassName="tb_OrderTableAdapter" Name="tb_Order" UserDataComponentName="tb_OrderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_JXCConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT A.ORID, A.SN, A.OCount, A.WareID, B.WName, A.CUID, C.CName, C.Phone, 
+      C.Address, A.Maker
+FROM tb_Order AS A LEFT OUTER JOIN
+      tb_WareInfo AS B ON A.WareID = B.WareID LEFT OUTER JOIN
+      tb_CustomerInfo AS C ON A.CUID = C.CUID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ORID" DataSetColumn="ORID" />
+              <Mapping SourceColumn="SN" DataSetColumn="SN" />
+              <Mapping SourceColumn="WareID" DataSetColumn="WareID" />
+              <Mapping SourceColumn="OCount" DataSetColumn="OCount" />
+              <Mapping SourceColumn="CUID" DataSetColumn="CUID" />
+              <Mapping SourceColumn="Maker" DataSetColumn="Maker" />
+              <Mapping SourceColumn="WName" DataSetColumn="WName" />
+              <Mapping SourceColumn="CName" DataSetColumn="CName" />
+              <Mapping SourceColumn="Phone" DataSetColumn="Phone" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tb_Order" msprop:Generator_UserTableName="tb_Order" msprop:Generator_RowDeletedName="tb_OrderRowDeleted" msprop:Generator_TableClassName="tb_OrderDataTable" msprop:Generator_RowChangedName="tb_OrderRowChanged" msprop:Generator_RowClassName="tb_OrderRow" msprop:Generator_RowChangingName="tb_OrderRowChanging" msprop:Generator_RowEvArgName="tb_OrderRowChangeEvent" msprop:Generator_RowEvHandlerName="tb_OrderRowChangeEventHandler" msprop:Generator_TablePropName="tb_Order" msprop:Generator_TableVarName="tabletb_Order" msprop:Generator_RowDeletingName="tb_OrderRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ORID" msprop:Generator_UserColumnName="ORID" msprop:Generator_ColumnPropNameInRow="ORID" msprop:Generator_ColumnVarNameInTable="columnORID" msprop:Generator_ColumnPropNameInTable="ORIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SN" msprop:Generator_UserColumnName="SN" msprop:Generator_ColumnPropNameInRow="SN" msprop:Generator_ColumnVarNameInTable="columnSN" msprop:Generator_ColumnPropNameInTable="SNColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="WareID" msprop:Generator_UserColumnName="WareID" msprop:Generator_ColumnPropNameInRow="WareID" msprop:Generator_ColumnVarNameInTable="columnWareID" msprop:Generator_ColumnPropNameInTable="WareIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OCount" msprop:Generator_UserColumnName="OCount" msprop:Generator_ColumnPropNameInRow="OCount" msprop:Generator_ColumnVarNameInTable="columnOCount" msprop:Generator_ColumnPropNameInTable="OCountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CUID" msprop:Generator_UserColumnName="CUID" msprop:Generator_ColumnPropNameInRow="CUID" msprop:Generator_ColumnVarNameInTable="columnCUID" msprop:Generator_ColumnPropNameInTable="CUIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Maker" msprop:Generator_UserColumnName="Maker" msprop:Generator_ColumnPropNameInRow="Maker" msprop:Generator_ColumnVarNameInTable="columnMaker" msprop:Generator_ColumnPropNameInTable="MakerColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WName" msprop:Generator_UserColumnName="WName" msprop:Generator_ColumnPropNameInRow="WName" msprop:Generator_ColumnVarNameInTable="columnWName" msprop:Generator_ColumnPropNameInTable="WNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CName" msprop:Generator_UserColumnName="CName" msprop:Generator_ColumnPropNameInRow="CName" msprop:Generator_ColumnVarNameInTable="columnCName" msprop:Generator_ColumnPropNameInTable="CNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone" msprop:Generator_UserColumnName="Phone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_UserColumnName="Address" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInTable="AddressColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
